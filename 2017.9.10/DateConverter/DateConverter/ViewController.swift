@@ -9,6 +9,40 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    enum Mode : Int{
+        case gregToHeb
+        case hebToGreg
+        case gregToArab
+        
+        var sourceCalendar : Calendar{
+            get{
+                switch self {
+                case .gregToHeb, .gregToArab:
+                    return Calendar(identifier: .gregorian)
+                case .hebToGreg:
+                    return Calendar(identifier: .hebrew)
+                }
+            }
+        }
+        
+        var destCalendar : Calendar{
+            get{
+                switch self {
+                case .gregToHeb: return Calendar(identifier: .hebrew)
+                case .hebToGreg: return Calendar(identifier: .gregorian)
+                case .gregToArab: return Calendar(identifier: .islamic)
+                }
+            }
+        }
+    }
+    
+    var mode : Mode = .gregToHeb{
+        didSet{
+            datePickerAction(datePicker)
+            datePicker.calendar = mode.sourceCalendar
+        }
+    }
 
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var dateLabel: UILabel!
@@ -31,13 +65,23 @@ class ViewController: UIViewController {
         let formatter = DateFormatter()
         
         formatter.dateStyle = .full
-        formatter.calendar = Calendar(identifier: .hebrew)
+        formatter.calendar = mode.destCalendar
+        //formatter.calendar = Calendar(identifier: .hebrew)
         formatter.locale = Locale(identifier: "he")
         
         dateLabel.text = formatter.string(from: sender.date)
         
     }
     
+    @IBAction func segmentAction(_ sender: UISegmentedControl) {
+        
+        if let m = Mode(rawValue: sender.selectedSegmentIndex){
+            self.mode = m
+        } else {
+            print("unsupported index \(sender.selectedSegmentIndex)")
+        }
+        
+    }
     
 
     override func didReceiveMemoryWarning() {
@@ -47,4 +91,8 @@ class ViewController: UIViewController {
 
 
 }
+
+
+
+
 

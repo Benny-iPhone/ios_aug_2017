@@ -36,13 +36,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oOS-4f-Zf3">
+                                <rect key="frame" x="16" y="297" width="343" height="29"/>
+                                <segments>
+                                    <segment title="לועזי לעברי"/>
+                                    <segment title="עברי ללועזי"/>
+                                    <segment title="לועזי לערבי"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="15K-LH-God"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2XL-x2-6bR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Amm-SW-f3S"/>
+                            <constraint firstItem="oOS-4f-Zf3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="NBm-Hn-KJO"/>
                             <constraint firstItem="2XL-x2-6bR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="W84-yp-t0R"/>
                             <constraint firstAttribute="trailing" secondItem="2XL-x2-6bR" secondAttribute="trailing" id="WKD-tu-0Ny"/>
                             <constraint firstItem="hjr-4G-EHu" firstAttribute="top" secondItem="2XL-x2-6bR" secondAttribute="bottom" constant="24" id="fMo-Bo-3w3"/>
+                            <constraint firstAttribute="trailing" secondItem="oOS-4f-Zf3" secondAttribute="trailing" constant="16" id="lLt-JG-AmX"/>
+                            <constraint firstItem="oOS-4f-Zf3" firstAttribute="top" secondItem="hjr-4G-EHu" secondAttribute="bottom" constant="16" id="rJa-Cg-cBS"/>
                             <constraint firstItem="hjr-4G-EHu" firstAttribute="centerX" secondItem="2XL-x2-6bR" secondAttribute="centerX" id="y19-Db-Iku"/>
                         </constraints>
                     </view>
@@ -53,6 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
