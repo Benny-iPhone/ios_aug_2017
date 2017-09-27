@@ -21,6 +21,8 @@ class ColorPickerViewController: UIViewController {
 
     var delegate : ColorPickerViewControllerDelegate?
     
+    var baseColor : UIColor = .white
+    
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
@@ -30,10 +32,10 @@ class ColorPickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        redSlider.value = 1
-        blueSlider.value = 1
-        greenSlider.value = 1
-        alphaSlider.value = 1
+        redSlider.value = Float(baseColor.redValue)
+        blueSlider.value = Float(baseColor.blueValue)
+        greenSlider.value = Float(baseColor.greenValue)
+        alphaSlider.value = Float(baseColor.alphaValue)
         
         sliderAction()
         

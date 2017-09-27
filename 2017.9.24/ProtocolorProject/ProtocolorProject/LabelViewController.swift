@@ -10,6 +10,12 @@ import UIKit
 
 class LabelViewController: UIViewController , ColorPickerViewControllerDelegate{
 
+    enum Mode : String{
+        case backgroundColor = "background"
+        case textColor = "text"
+    }
+    
+    var mode : Mode?
     @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
@@ -30,7 +36,17 @@ class LabelViewController: UIViewController , ColorPickerViewControllerDelegate{
     
     func colorPickerViewController(_ controller: ColorPickerViewController, didSelectColor color: UIColor?) {
         
-        label.textColor = color
+        guard let mode = mode else {
+            return
+        }
+        
+        switch mode {
+        case .backgroundColor:
+            label.backgroundColor = color
+        case .textColor:
+            label.textColor = color
+        }
+        
         
     }
     
@@ -41,8 +57,20 @@ class LabelViewController: UIViewController , ColorPickerViewControllerDelegate{
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if let nextVC = segue.destination as? ColorPickerViewController{
+        if let nextVC = segue.destination as? ColorPickerViewController,
+            let raw = segue.identifier,
+            let mode = Mode(rawValue: raw){
             nextVC.delegate = self
+            
+            self.mode = mode
+            
+            switch mode {
+            case .backgroundColor:
+                nextVC.baseColor = label.backgroundColor ?? .white
+            case .textColor:
+                nextVC.baseColor = label.textColor
+            }
+            
         }
         
     }
