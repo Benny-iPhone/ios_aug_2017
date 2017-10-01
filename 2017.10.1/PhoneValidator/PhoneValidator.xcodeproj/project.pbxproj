@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A255CFC87422033E0B5C43D3 /* Pods_PhoneValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47F1867F362C6C39A11610F /* Pods_PhoneValidator.framework */; };
+		B2BB50DC1F8134A6002DECD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BB50DB1F8134A6002DECD2 /* AppDelegate.swift */; };
+		B2BB50DE1F8134A6002DECD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BB50DD1F8134A6002DECD2 /* ViewController.swift */; };
+		B2BB50E11F8134A6002DECD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BB50DF1F8134A6002DECD2 /* Main.storyboard */; };
+		B2BB50E31F8134A6002DECD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BB50E21F8134A6002DECD2 /* Assets.xcassets */; };
+		B2BB50E61F8134A6002DECD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BB50E41F8134A6002DECD2 /* LaunchScreen.storyboard */; };
+		B2BB50EE1F813917002DECD2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BB50ED1F813917002DECD2 /* Utils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		915243B23EBE04E242FB9F5C /* Pods-PhoneValidator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneValidator.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneValidator/Pods-PhoneValidator.release.xcconfig"; sourceTree = "<group>"; };
+		B2BB50D81F8134A6002DECD2 /* PhoneValidator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneValidator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2BB50DB1F8134A6002DECD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B2BB50DD1F8134A6002DECD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2BB50E01F8134A6002DECD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2BB50E21F8134A6002DECD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2BB50E51F8134A6002DECD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2BB50E71F8134A6002DECD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2BB50ED1F813917002DECD2 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C2D65A3456F466E8C04B4B76 /* Pods-PhoneValidator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneValidator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneValidator/Pods-PhoneValidator.debug.xcconfig"; sourceTree = "<group>"; };
+		D47F1867F362C6C39A11610F /* Pods_PhoneValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2BB50D51F8134A6002DECD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A255CFC87422033E0B5C43D3 /* Pods_PhoneValidator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04774BC80D26E4B4555114C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2D65A3456F466E8C04B4B76 /* Pods-PhoneValidator.debug.xcconfig */,
+				915243B23EBE04E242FB9F5C /* Pods-PhoneValidator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		40115783152F82A0F361B796 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D47F1867F362C6C39A11610F /* Pods_PhoneValidator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2BB50CF1F8134A6002DECD2 = {
+			isa = PBXGroup;
+			children = (
+				B2BB50DA1F8134A6002DECD2 /* PhoneValidator */,
+				B2BB50D91F8134A6002DECD2 /* Products */,
+				04774BC80D26E4B4555114C5 /* Pods */,
+				40115783152F82A0F361B796 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B2BB50D91F8134A6002DECD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2BB50D81F8134A6002DECD2 /* PhoneValidator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2BB50DA1F8134A6002DECD2 /* PhoneValidator */ = {
+			isa = PBXGroup;
+			children = (
+				B2BB50DB1F8134A6002DECD2 /* AppDelegate.swift */,
+				B2BB50DD1F8134A6002DECD2 /* ViewController.swift */,
+				B2BB50ED1F813917002DECD2 /* Utils.swift */,
+				B2BB50DF1F8134A6002DECD2 /* Main.storyboard */,
+				B2BB50E21F8134A6002DECD2 /* Assets.xcassets */,
+				B2BB50E41F8134A6002DECD2 /* LaunchScreen.storyboard */,
+				B2BB50E71F8134A6002DECD2 /* Info.plist */,
+			);
+			path = PhoneValidator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2BB50D71F8134A6002DECD2 /* PhoneValidator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2BB50EA1F8134A6002DECD2 /* Build configuration list for PBXNativeTarget "PhoneValidator" */;
+			buildPhases = (
+				15BA1618769B8F34A80D1EC8 /* [CP] Check Pods Manifest.lock */,
+				B2BB50D41F8134A6002DECD2 /* Sources */,
+				B2BB50D51F8134A6002DECD2 /* Frameworks */,
+				B2BB50D61F8134A6002DECD2 /* Resources */,
+				EF44A40CCD4A39F42894CDFA /* [CP] Embed Pods Frameworks */,
+				0B2B221EBC16BD5DD0FA0E62 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhoneValidator;
+			productName = PhoneValidator;
+			productReference = B2BB50D81F8134A6002DECD2 /* PhoneValidator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2BB50D01F8134A6002DECD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = hackeru;
+				TargetAttributes = {
+					B2BB50D71F8134A6002DECD2 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B2BB50D31F8134A6002DECD2 /* Build configuration list for PBXProject "PhoneValidator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2BB50CF1F8134A6002DECD2;
+			productRefGroup = B2BB50D91F8134A6002DECD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2BB50D71F8134A6002DECD2 /* PhoneValidator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2BB50D61F8134A6002DECD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2BB50E61F8134A6002DECD2 /* LaunchScreen.storyboard in Resources */,
+				B2BB50E31F8134A6002DECD2 /* Assets.xcassets in Resources */,
+				B2BB50E11F8134A6002DECD2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B2B221EBC16BD5DD0FA0E62 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoneValidator/Pods-PhoneValidator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15BA1618769B8F34A80D1EC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF44A40CCD4A39F42894CDFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoneValidator/Pods-PhoneValidator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2BB50D41F8134A6002DECD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2BB50DE1F8134A6002DECD2 /* ViewController.swift in Sources */,
+				B2BB50DC1F8134A6002DECD2 /* AppDelegate.swift in Sources */,
+				B2BB50EE1F813917002DECD2 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B2BB50DF1F8134A6002DECD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2BB50E01F8134A6002DECD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2BB50E41F8134A6002DECD2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2BB50E51F8134A6002DECD2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2BB50E81F8134A6002DECD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B2BB50E91F8134A6002DECD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2BB50EB1F8134A6002DECD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2D65A3456F466E8C04B4B76 /* Pods-PhoneValidator.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhoneValidator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackeru.PhoneValidator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B2BB50EC1F8134A6002DECD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 915243B23EBE04E242FB9F5C /* Pods-PhoneValidator.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhoneValidator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackeru.PhoneValidator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2BB50D31F8134A6002DECD2 /* Build configuration list for PBXProject "PhoneValidator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2BB50E81F8134A6002DECD2 /* Debug */,
+				B2BB50E91F8134A6002DECD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2BB50EA1F8134A6002DECD2 /* Build configuration list for PBXNativeTarget "PhoneValidator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2BB50EB1F8134A6002DECD2 /* Debug */,
+				B2BB50EC1F8134A6002DECD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2BB50D01F8134A6002DECD2 /* Project object */;
+}

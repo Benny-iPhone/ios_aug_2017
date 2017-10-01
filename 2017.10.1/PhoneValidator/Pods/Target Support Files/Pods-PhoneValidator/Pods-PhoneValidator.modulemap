@@ -1,0 +1,6 @@
+framework module Pods_PhoneValidator {
+  umbrella header "Pods-PhoneValidator-umbrella.h"
+
+  export *
+  module * { export * }
+}
