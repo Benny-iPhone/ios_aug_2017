@@ -24,6 +24,28 @@ class DatabaseManager{
         return persistentContainer.viewContext
     }
     
+    func allPeople() -> NSFetchedResultsController<Person>
+    {
+        let request : NSFetchRequest<Person> = Person.fetchRequest()
+        
+        let lastNameSort = NSSortDescriptor(key: "lastName", ascending: true)
+        let firstNameSort = NSSortDescriptor(key: "firstName", ascending: true)
+        
+        request.sortDescriptors = [lastNameSort,firstNameSort]
+        
+        let controller : NSFetchedResultsController<Person> = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: "lastName", cacheName: nil)
+        
+        do {
+            try controller.performFetch()
+        } catch {
+            print(error)
+        }
+        
+        return controller
+        
+    }
+    
+    /*
     func allPeople() -> [Person]
     {
         let request : NSFetchRequest<Person> = Person.fetchRequest()
@@ -37,7 +59,7 @@ class DatabaseManager{
         return arr ?? []
         
     }
-    
+    */
     // MARK: - Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {
@@ -78,7 +100,7 @@ class DatabaseManager{
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                print("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }

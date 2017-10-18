@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 
 class PersonViewController: UIViewController {
+    
+    var person : Person?
 
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -23,6 +25,15 @@ class PersonViewController: UIViewController {
 
         let button = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(takePicAction))
         navigationItem.rightBarButtonItem = button
+        
+        if let person = person{ //person not nil ==> edit
+            firstNameTextField.text = person.firstName
+            lastNameTextField.text = person.lastName
+            
+            actionButton.setTitle("Edit Person", for: .normal)
+        } else {
+            actionButton.setTitle("Create Person", for: .normal)
+        }
     }
     
     @objc func takePicAction(){
@@ -32,7 +43,8 @@ class PersonViewController: UIViewController {
     @IBAction func saveAction(_ sender: Any) {
         let context = DatabaseManager.manager.context
         
-        let p = Person(context: context)
+        //person that being edit at the moment or new Person if not in edit mode
+        let p = person ?? Person(context: context)
         p.firstName = firstNameTextField.text
         p.lastName = lastNameTextField.text
         
