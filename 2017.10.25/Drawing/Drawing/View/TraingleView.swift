@@ -38,6 +38,7 @@ import UIKit
             return
         }
         
+
         let w = self.bounds.width
         let h = self.bounds.height
         
