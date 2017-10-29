@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jlk-xZ-IhC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Draw Something-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawSomething" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SE7-vw-crY">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Color" id="Yga-dC-lsT">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="colorAction:" destination="BYZ-38-t0r" id="Pre-cc-VyD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="100" style="plain" id="LWD-UN-GMW">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="15" id="kUG-Hb-X0r">
+                                            <rect key="frame" x="68.5" y="5" width="100" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="thumbTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="strokeWidthAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jyy-hb-ebZ"/>
+                                            </connections>
+                                        </slider>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="redo" id="g7o-fg-AGo">
+                                        <connections>
+                                            <action selector="redAction:" destination="BYZ-38-t0r" id="hEj-Xu-cGj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="undo" id="GXb-Ea-2Zp">
+                                        <connections>
+                                            <action selector="undoAction:" destination="BYZ-38-t0r" id="kdy-gC-CaI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bwr-TT-mLY" customClass="DrawView" customModule="DrawSomething" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bwr-TT-mLY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2RF-bn-LU7"/>
+                            <constraint firstItem="Bwr-TT-mLY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dbp-JN-hmv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bwr-TT-mLY" secondAttribute="trailing" id="OHP-Uv-2Mh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SE7-vw-crY" secondAttribute="bottom" id="avq-hH-tlK"/>
+                            <constraint firstItem="SE7-vw-crY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gRJ-V2-OT7"/>
+                            <constraint firstItem="SE7-vw-crY" firstAttribute="top" secondItem="Bwr-TT-mLY" secondAttribute="bottom" id="pmM-E9-Ic4"/>
+                            <constraint firstItem="SE7-vw-crY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q5P-zR-0LZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Draw Something" id="SIj-5E-JA4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="Hih-iy-8T0">
+                            <connections>
+                                <action selector="clearAction:" destination="BYZ-38-t0r" id="2Dy-L7-J86"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="dfB-hK-v2A">
+                            <connections>
+                                <action selector="shareAction:" destination="BYZ-38-t0r" id="8r7-rO-FbE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="drawView" destination="Bwr-TT-mLY" id="jWL-mr-z5k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="31"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JX8-cu-QaS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jlk-xZ-IhC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dFr-5q-3Gp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="R8m-OK-Ndj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqf-Xl-uHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-254.40000000000001" y="31.484257871064472"/>
+        </scene>
+    </scenes>
+</document>
