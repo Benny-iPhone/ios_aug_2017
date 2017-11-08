@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYH-so-Jbz" customClass="CustomButton" customModule="CustomButton" customModuleProvider="target">
+                                <rect key="frame" x="141" y="36" width="94" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="ZT0-0C-Nv7"/>
+                                </constraints>
+                                <state key="normal" title="Save Settings"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMM-cS-jgR" customClass="CustomControl" customModule="CustomButton" customModuleProvider="target">
+                                <rect key="frame" x="108.5" y="315" width="158.5" height="57"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-save" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-i3-Lnu">
+                                        <rect key="frame" x="121.5" y="16" width="25" height="25"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save To Disk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76f-cQ-rNJ">
+                                        <rect key="frame" x="12" y="18" width="97.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.21960784310000001" green="0.3803921569" blue="0.62352941179999999" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Jcm-i3-Lnu" firstAttribute="leading" secondItem="76f-cQ-rNJ" secondAttribute="trailing" constant="12" id="1wk-LJ-ZjZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jcm-i3-Lnu" secondAttribute="trailing" constant="12" id="CTU-qM-9XB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jcm-i3-Lnu" secondAttribute="bottom" constant="16" id="dJb-az-wuI"/>
+                                    <constraint firstItem="76f-cQ-rNJ" firstAttribute="centerY" secondItem="Jcm-i3-Lnu" secondAttribute="centerY" id="jbZ-NN-07o"/>
+                                    <constraint firstItem="Jcm-i3-Lnu" firstAttribute="top" secondItem="HMM-cS-jgR" secondAttribute="top" constant="16" id="jjg-Ei-ZNC"/>
+                                    <constraint firstItem="76f-cQ-rNJ" firstAttribute="leading" secondItem="HMM-cS-jgR" secondAttribute="leading" constant="12" id="mLt-vP-eZJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="myButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1d5-zm-GdI"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XYH-so-Jbz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="1iE-Ml-GYN"/>
+                            <constraint firstItem="XYH-so-Jbz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HQI-Sy-3tz"/>
+                            <constraint firstItem="XYH-so-Jbz" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" id="gd5-1e-gld"/>
+                            <constraint firstItem="HMM-cS-jgR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gpN-RF-Dff"/>
+                            <constraint firstItem="HMM-cS-jgR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nVK-OQ-SFd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-save" width="25" height="25"/>
+    </resources>
+</document>

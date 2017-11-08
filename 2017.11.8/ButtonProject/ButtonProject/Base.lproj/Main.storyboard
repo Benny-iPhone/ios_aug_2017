@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ButtonProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCX-mD-rUc">
+                                <rect key="frame" x="16" y="391" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQn-eE-XVD">
+                                <rect key="frame" x="76" y="361" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrZ-VY-yaQ">
+                                <rect key="frame" x="-17" y="333" width="79" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icons8-home">
+                                    <color key="titleColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRu-Js-FOR">
+                                <rect key="frame" x="58" y="391" width="129" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Custom Button">
+                                    <color key="titleColor" red="0.88949757814407349" green="0.90897989273071289" blue="0.048064939677715302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted" title="Highlighted">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sa-hJ-JsB">
+                                <rect key="frame" x="16" y="36" width="50" height="50"/>
+                                <state key="normal" image="icons8-cancel"/>
+                                <state key="selected" image="icons8-ok"/>
+                                <connections>
+                                    <action selector="checkboxAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N8u-bi-zYT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept Terms of use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJZ-Ra-KNO">
+                                <rect key="frame" x="74" y="51" width="157.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akb-0B-jEl">
+                                <rect key="frame" x="141" y="351" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCt-A1-d32">
+                                <rect key="frame" x="29" y="137" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icons8-record"/>
+                                <state key="selected" image="icons8-record_filled"/>
+                                <state key="highlighted" image="icons8-record_filled"/>
+                                <connections>
+                                    <action selector="radioButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hrs-lk-tqt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecb-U3-B3h">
+                                <rect key="frame" x="29" y="178" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icons8-record"/>
+                                <state key="selected" image="icons8-record_filled"/>
+                                <state key="highlighted" image="icons8-record_filled"/>
+                                <connections>
+                                    <action selector="radioButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QWl-7e-d0o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hx0-oh-Op8">
+                                <rect key="frame" x="29" y="219" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icons8-record"/>
+                                <state key="selected" image="icons8-record_filled"/>
+                                <state key="highlighted" image="icons8-record_filled"/>
+                                <connections>
+                                    <action selector="radioButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lwk-bC-DhF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRp-Gn-59h">
+                                <rect key="frame" x="29" y="260" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icons8-record"/>
+                                <state key="selected" image="icons8-record_filled"/>
+                                <state key="highlighted" image="icons8-record_filled"/>
+                                <connections>
+                                    <action selector="radioButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qel-dE-Uoj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rJZ-Ra-KNO" firstAttribute="centerY" secondItem="2sa-hJ-JsB" secondAttribute="centerY" id="9C6-c2-EuG"/>
+                            <constraint firstItem="2sa-hJ-JsB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="b3W-PE-MiT"/>
+                            <constraint firstItem="2sa-hJ-JsB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="wZw-Nt-TwE"/>
+                            <constraint firstItem="rJZ-Ra-KNO" firstAttribute="leading" secondItem="2sa-hJ-JsB" secondAttribute="trailing" constant="8" id="x0k-kU-Yb4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="radioButtons" destination="dCt-A1-d32" collectionClass="NSMutableArray" id="4OS-fa-0EE"/>
+                        <outletCollection property="radioButtons" destination="Ecb-U3-B3h" collectionClass="NSMutableArray" id="YwU-Im-ped"/>
+                        <outletCollection property="radioButtons" destination="Hx0-oh-Op8" collectionClass="NSMutableArray" id="HIe-NB-KNs"/>
+                        <outletCollection property="radioButtons" destination="WRp-Gn-59h" collectionClass="NSMutableArray" id="8Q7-Bh-xgI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143.19999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-cancel" width="50" height="50"/>
+        <image name="icons8-home" width="25" height="25"/>
+        <image name="icons8-ok" width="50" height="50"/>
+        <image name="icons8-record" width="25" height="25"/>
+        <image name="icons8-record_filled" width="25" height="25"/>
+    </resources>
+</document>
