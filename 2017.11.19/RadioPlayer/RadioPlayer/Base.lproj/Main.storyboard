@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RadioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" minimumValueImage="icons8-no_audio" maximumValueImage="icons8-volume_up" translatesAutoresizingMaskIntoConstraints="NO" id="f2r-Tx-LSY">
+                                <rect key="frame" x="14" y="36" width="347" height="31"/>
+                                <color key="minimumTrackTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="volumeSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="jUS-qR-SXZ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jo7-K6-ADI">
+                                <rect key="frame" x="166" y="82" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwo-f8-tb7">
+                                <rect key="frame" x="59" y="143" width="256" height="256"/>
+                                <state key="normal" image="icons8-circled_play_filled"/>
+                                <state key="selected" image="icons8-circled_pause_filled"/>
+                                <connections>
+                                    <action selector="playPauseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z8q-cf-CQ7"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="idB-xR-ead">
+                                <rect key="frame" x="16" y="623" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Jerusalem"/>
+                                    <segment title="GalGalatz"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="stationChangeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="jWv-W1-Iif"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="idB-xR-ead" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3BI-RE-b2m"/>
+                            <constraint firstItem="jo7-K6-ADI" firstAttribute="centerX" secondItem="f2r-Tx-LSY" secondAttribute="centerX" id="KWj-40-sTA"/>
+                            <constraint firstItem="f2r-Tx-LSY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="PMY-Rd-m8e"/>
+                            <constraint firstItem="Hwo-f8-tb7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PZu-MT-RZV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f2r-Tx-LSY" secondAttribute="trailing" constant="16" id="bms-ee-fro"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="idB-xR-ead" secondAttribute="trailing" constant="16" id="mwh-aI-MMM"/>
+                            <constraint firstItem="jo7-K6-ADI" firstAttribute="top" secondItem="f2r-Tx-LSY" secondAttribute="bottom" constant="16" id="s49-ov-H6w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="idB-xR-ead" secondAttribute="bottom" constant="16" id="tYl-vT-B0a"/>
+                            <constraint firstItem="f2r-Tx-LSY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xjM-jk-FDY"/>
+                            <constraint firstItem="Hwo-f8-tb7" firstAttribute="top" secondItem="jo7-K6-ADI" secondAttribute="bottom" constant="40" id="zTa-gq-ckz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="playPauseButton" destination="Hwo-f8-tb7" id="bBF-Jh-Yuh"/>
+                        <outlet property="volumeLabel" destination="jo7-K6-ADI" id="gKK-UH-Pbb"/>
+                        <outlet property="volumeSlider" destination="f2r-Tx-LSY" id="DTe-eR-cEv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.799999999999997" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-circled_pause_filled" width="256" height="256"/>
+        <image name="icons8-circled_play_filled" width="256" height="256"/>
+        <image name="icons8-no_audio" width="25" height="25"/>
+        <image name="icons8-volume_up" width="25" height="25"/>
+    </resources>
+</document>
