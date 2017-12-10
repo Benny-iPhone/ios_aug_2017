@@ -13,18 +13,76 @@ class DatabaseLogic{
     static let shared = DatabaseLogic()
     
     let usersRef : DatabaseReference
+    let chatroomsRef : DatabaseReference
     
     private init(){
         let rootRef = Database.database().reference()
         usersRef = rootRef.child("users")
+        chatroomsRef = rootRef.child("chatrooms")
     }
+    
+    func removeRoom(_ room : ChatRoom){
+        //chatroomsRef.child(room.id).removeValue()
+        chatroomsRef.child(room.id).setValue(nil)
+    }
+    
+    func trackAllRooms(with completion : @escaping ([ChatRoom])->Void) -> UInt{
+        
+        return chatroomsRef.observe(.value, with: { (snapshot) in
+            
+            guard let rawData = snapshot.value as? [String:Any] else{
+                if snapshot.value is NSNull{
+                    completion([])
+                }
+                return
+            }
+            
+            var rooms : [ChatRoom] = []
+            
+            for (key,val) in rawData{
+                guard let dict = val as? [String:Any] else{
+                    continue
+                }
+                
+                let c = ChatRoom(key: key, dict: dict)
+                rooms.append(c)
+            }
+            
+            completion(rooms)
+            
+            
+            
+        })
+        
+    }
+    
+    func createRoom(with name : String){
+        guard let uid = AuthLogic.shared.currentUserId else {
+            return
+        }
+        
+        let dict : [String:Any] = [
+            "name":name,
+            "owner":uid,
+            "date":Date().timeIntervalSince1970
+        ]
+        
+        chatroomsRef.childByAutoId().setValue(dict)
+        
+    }
+    
+    
     
     func write(user : User){
         
-        let dict : [String:Any] = [
+        var dict : [String:Any] = [
             "name":user.displayName ?? "no name",
             "email":user.email ?? "no email"
         ]
+        
+        if let photoUrl = user.photoURL{
+            dict["photoUrl"] = photoUrl.path
+        }
         
         usersRef.child(user.uid).setValue(dict)
     }

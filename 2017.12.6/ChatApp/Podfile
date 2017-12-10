@@ -14,5 +14,19 @@ target 'ChatApp' do
   pod 'Firebase/Storage'
   pod 'PKHUD'
   
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  
+  pod 'JSQMessagesViewController'
 
 end
+
+
+
+
+
+
+
+
+
+

@@ -20,6 +20,9 @@
 		B23EEA151FD8744900C58A90 /* Empty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23EEA141FD8744900C58A90 /* Empty.storyboard */; };
 		B23EEA171FD8748100C58A90 /* MainFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23EEA161FD8748100C58A90 /* MainFlow.storyboard */; };
 		B23EEA191FD8758400C58A90 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23EEA181FD8758400C58A90 /* UsersTableViewController.swift */; };
+		B2431A411FDDA6D200EDAAC2 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2431A401FDDA6D200EDAAC2 /* ChatRoom.swift */; };
+		B2431A431FDDAB7F00EDAAC2 /* ChatRoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2431A421FDDAB7F00EDAAC2 /* ChatRoomsTableViewController.swift */; };
+		B2431A451FDDBA9F00EDAAC2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2431A441FDDBA9F00EDAAC2 /* ChatViewController.swift */; };
 		D30B7B42A0B4415EF0B698E5 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1A20B28B96BA49AAD4B191 /* Pods_ChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,9 @@
 		B23EEA141FD8744900C58A90 /* Empty.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Empty.storyboard; sourceTree = "<group>"; };
 		B23EEA161FD8748100C58A90 /* MainFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainFlow.storyboard; sourceTree = "<group>"; };
 		B23EEA181FD8758400C58A90 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		B2431A401FDDA6D200EDAAC2 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
+		B2431A421FDDAB7F00EDAAC2 /* ChatRoomsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomsTableViewController.swift; sourceTree = "<group>"; };
+		B2431A441FDDBA9F00EDAAC2 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		CF1A20B28B96BA49AAD4B191 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +103,8 @@
 				B23EEA071FD84F5B00C58A90 /* RegisterViewController.swift */,
 				B23EEA091FD84F6100C58A90 /* LoginViewController.swift */,
 				B23EEA181FD8758400C58A90 /* UsersTableViewController.swift */,
+				B2431A421FDDAB7F00EDAAC2 /* ChatRoomsTableViewController.swift */,
+				B2431A441FDDBA9F00EDAAC2 /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,6 +115,7 @@
 				B23EEA0E1FD8616C00C58A90 /* AuthLogic.swift */,
 				B23EEA121FD8705D00C58A90 /* DatabaseLogic.swift */,
 				B23EEA101FD8661600C58A90 /* Utils.swift */,
+				B2431A401FDDA6D200EDAAC2 /* ChatRoom.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,16 +233,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -270,10 +289,13 @@
 			files = (
 				B23EEA111FD8661600C58A90 /* Utils.swift in Sources */,
 				B23EEA0A1FD84F6100C58A90 /* LoginViewController.swift in Sources */,
+				B2431A431FDDAB7F00EDAAC2 /* ChatRoomsTableViewController.swift in Sources */,
 				B23EE9F51FD84F0900C58A90 /* AppDelegate.swift in Sources */,
 				B23EEA131FD8705D00C58A90 /* DatabaseLogic.swift in Sources */,
 				B23EEA0F1FD8616C00C58A90 /* AuthLogic.swift in Sources */,
 				B23EEA191FD8758400C58A90 /* UsersTableViewController.swift in Sources */,
+				B2431A411FDDA6D200EDAAC2 /* ChatRoom.swift in Sources */,
+				B2431A451FDDBA9F00EDAAC2 /* ChatViewController.swift in Sources */,
 				B23EEA081FD84F5B00C58A90 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

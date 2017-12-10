@@ -23,6 +23,13 @@ class UsersTableViewController: UITableViewController {
         
     }
 
+    
+    @IBAction func logoutAction(_ sender: Any) {
+        
+        AuthLogic.shared.logout()
+        
+    }
+    
 
     // MARK: - Table view data source
 

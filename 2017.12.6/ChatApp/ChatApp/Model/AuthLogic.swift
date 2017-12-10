@@ -16,8 +16,50 @@ class AuthLogic{
         return Auth.auth().currentUser != nil
     }
     
+    var currentUserId : String?{
+        return Auth.auth().currentUser?.uid
+    }
+    
+    var currentUserName : String?{
+        return Auth.auth().currentUser?.displayName
+    }
+    
+    func setupRootViewController(){
+        let window = UIApplication.shared.delegate?.window
+        
+        if self.didLogin{
+            window??.rootViewController = UIStoryboard(name: "MainFlow", bundle: nil).instantiateInitialViewController()
+        } else {
+            window??.rootViewController = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()
+        }
+    }
+    
+    
     func logout(){
         try? Auth.auth().signOut()
+        setupRootViewController()
+    }
+    
+    func facebookLogin(with token : String,
+                       callback : @escaping (Error?)->Void)
+    {
+        
+        let credential = FacebookAuthProvider.credential(withAccessToken: token)
+        
+        Auth.auth().signIn(with: credential) { (user, error) in
+            
+            if let user = user{
+                DatabaseLogic.shared.write(user: user)
+            }
+            
+            callback(error)
+            
+            if error == nil{
+                self.setupRootViewController()
+            }
+            
+        }
+        
     }
     
     func forgotPassword(with email : String,
@@ -33,6 +75,10 @@ class AuthLogic{
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             
             callback(error)
+            
+            if error == nil{
+                self.setupRootViewController()
+            }
             
         }
         
@@ -66,6 +112,10 @@ class AuthLogic{
                 DatabaseLogic.shared.write(user: user)
                 
                 callback(err)
+                
+                if error == nil{
+                    self.setupRootViewController()
+                }
             })
             
             

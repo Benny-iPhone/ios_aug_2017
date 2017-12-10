@@ -8,6 +8,7 @@
 
 import UIKit
 import PKHUD
+import FBSDKLoginKit
 
 class RegisterViewController: UIViewController {
 
@@ -55,6 +56,21 @@ class RegisterViewController: UIViewController {
     
     
     @IBAction func facebookAction(_ sender: Any) {
+        
+        let manager = FBSDKLoginManager()
+        manager.logIn(withReadPermissions: ["public_profile","email"], from: self) { (result, error) in
+            
+            guard let token = result?.token.tokenString else{
+                error?.localizedDescription.showError()
+                return
+            }
+            
+            AuthLogic.shared.facebookLogin(with: token, callback: { (err) in
+                err?.localizedDescription.showError()
+            })
+            
+        }
+        
     }
     
 
