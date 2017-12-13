@@ -8,6 +8,22 @@
 
 import Foundation
 import PKHUD
+import JSQMessagesViewController
+
+extension UIColor{
+    class var randomDark : UIColor{
+        return UIColor(red: CGFloat(arc4random_uniform(128) + 64) / 255,
+                       green: CGFloat(arc4random_uniform(128) + 64) / 255,
+                       blue: CGFloat(arc4random_uniform(128) + 64) / 255,
+                       alpha: 1)
+    }
+}
+
+extension JSQMessage{
+    var isOutgoing : Bool{
+        return self.senderId == AuthLogic.shared.currentUserId
+    }
+}
 
 extension String{
     func showError(){

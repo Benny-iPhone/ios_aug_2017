@@ -24,6 +24,11 @@ class AuthLogic{
         return Auth.auth().currentUser?.displayName
     }
     
+    var currentUserPhotoUrl : URL?{
+        return Auth.auth().currentUser?.photoURL
+    }
+    
+    
     func setupRootViewController(){
         let window = UIApplication.shared.delegate?.window
         
