@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2EEB0E81FE6C94A00613300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EEB0E71FE6C94A00613300 /* AppDelegate.swift */; };
+		B2EEB0EA1FE6C94A00613300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EEB0E91FE6C94A00613300 /* ViewController.swift */; };
+		B2EEB0ED1FE6C94A00613300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2EEB0EB1FE6C94A00613300 /* Main.storyboard */; };
+		B2EEB0EF1FE6C94A00613300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2EEB0EE1FE6C94A00613300 /* Assets.xcassets */; };
+		B2EEB0F21FE6C94A00613300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2EEB0F01FE6C94A00613300 /* LaunchScreen.storyboard */; };
+		B2EEB0FB1FE6CA6800613300 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EEB0FA1FE6CA6800613300 /* AppManager.swift */; };
+		B2EEB0FD1FE6E29400613300 /* FuelStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EEB0FC1FE6E29400613300 /* FuelStation.swift */; };
+		B2EEB0FF1FE6EE5700613300 /* FuelStationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EEB0FE1FE6EE5700613300 /* FuelStationsTableViewController.swift */; };
+		B2EEB1011FE6F4EF00613300 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EEB1001FE6F4EF00613300 /* DetailsViewController.swift */; };
+		FF5CC7C7515EC153710386DC /* Pods_FuelStations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DC06EB422796AB376CFE7D /* Pods_FuelStations.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2AF183FEAAEE0FAD494420CC /* Pods-FuelStations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelStations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuelStations/Pods-FuelStations.debug.xcconfig"; sourceTree = "<group>"; };
+		75178E9075228D8AF81855F2 /* Pods-FuelStations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelStations.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuelStations/Pods-FuelStations.release.xcconfig"; sourceTree = "<group>"; };
+		B2EEB0E41FE6C94A00613300 /* FuelStations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuelStations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2EEB0E71FE6C94A00613300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B2EEB0E91FE6C94A00613300 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2EEB0EC1FE6C94A00613300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2EEB0EE1FE6C94A00613300 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2EEB0F11FE6C94A00613300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2EEB0F31FE6C94A00613300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2EEB0FA1FE6CA6800613300 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		B2EEB0FC1FE6E29400613300 /* FuelStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStation.swift; sourceTree = "<group>"; };
+		B2EEB0FE1FE6EE5700613300 /* FuelStationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStationsTableViewController.swift; sourceTree = "<group>"; };
+		B2EEB1001FE6F4EF00613300 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		C1DC06EB422796AB376CFE7D /* Pods_FuelStations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuelStations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2EEB0E11FE6C94A00613300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5CC7C7515EC153710386DC /* Pods_FuelStations.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44AF7747E6E1C27968A0D776 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1DC06EB422796AB376CFE7D /* Pods_FuelStations.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7519A30E9127E7093F3F9385 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2AF183FEAAEE0FAD494420CC /* Pods-FuelStations.debug.xcconfig */,
+				75178E9075228D8AF81855F2 /* Pods-FuelStations.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B2EEB0DB1FE6C94A00613300 = {
+			isa = PBXGroup;
+			children = (
+				B2EEB0E61FE6C94A00613300 /* FuelStations */,
+				B2EEB0E51FE6C94A00613300 /* Products */,
+				7519A30E9127E7093F3F9385 /* Pods */,
+				44AF7747E6E1C27968A0D776 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B2EEB0E51FE6C94A00613300 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2EEB0E41FE6C94A00613300 /* FuelStations.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2EEB0E61FE6C94A00613300 /* FuelStations */ = {
+			isa = PBXGroup;
+			children = (
+				B2EEB0F91FE6CA5A00613300 /* Model */,
+				B2EEB0E71FE6C94A00613300 /* AppDelegate.swift */,
+				B2EEB0E91FE6C94A00613300 /* ViewController.swift */,
+				B2EEB0FE1FE6EE5700613300 /* FuelStationsTableViewController.swift */,
+				B2EEB1001FE6F4EF00613300 /* DetailsViewController.swift */,
+				B2EEB0EB1FE6C94A00613300 /* Main.storyboard */,
+				B2EEB0EE1FE6C94A00613300 /* Assets.xcassets */,
+				B2EEB0F01FE6C94A00613300 /* LaunchScreen.storyboard */,
+				B2EEB0F31FE6C94A00613300 /* Info.plist */,
+			);
+			path = FuelStations;
+			sourceTree = "<group>";
+		};
+		B2EEB0F91FE6CA5A00613300 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2EEB0FA1FE6CA6800613300 /* AppManager.swift */,
+				B2EEB0FC1FE6E29400613300 /* FuelStation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2EEB0E31FE6C94A00613300 /* FuelStations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2EEB0F61FE6C94A00613300 /* Build configuration list for PBXNativeTarget "FuelStations" */;
+			buildPhases = (
+				FDDAD80FDDDDCA7BA6F49CEA /* [CP] Check Pods Manifest.lock */,
+				B2EEB0E01FE6C94A00613300 /* Sources */,
+				B2EEB0E11FE6C94A00613300 /* Frameworks */,
+				B2EEB0E21FE6C94A00613300 /* Resources */,
+				4068D1CDDDF3BDA0FAE8EE21 /* [CP] Embed Pods Frameworks */,
+				73F91376F50E3A1EB0B46301 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FuelStations;
+			productName = FuelStations;
+			productReference = B2EEB0E41FE6C94A00613300 /* FuelStations.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2EEB0DC1FE6C94A00613300 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = hackeru;
+				TargetAttributes = {
+					B2EEB0E31FE6C94A00613300 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B2EEB0DF1FE6C94A00613300 /* Build configuration list for PBXProject "FuelStations" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2EEB0DB1FE6C94A00613300;
+			productRefGroup = B2EEB0E51FE6C94A00613300 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2EEB0E31FE6C94A00613300 /* FuelStations */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2EEB0E21FE6C94A00613300 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2EEB0F21FE6C94A00613300 /* LaunchScreen.storyboard in Resources */,
+				B2EEB0EF1FE6C94A00613300 /* Assets.xcassets in Resources */,
+				B2EEB0ED1FE6C94A00613300 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4068D1CDDDF3BDA0FAE8EE21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FuelStations/Pods-FuelStations-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FuelStations/Pods-FuelStations-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73F91376F50E3A1EB0B46301 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FuelStations/Pods-FuelStations-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDDAD80FDDDDCA7BA6F49CEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FuelStations-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2EEB0E01FE6C94A00613300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2EEB0FB1FE6CA6800613300 /* AppManager.swift in Sources */,
+				B2EEB0EA1FE6C94A00613300 /* ViewController.swift in Sources */,
+				B2EEB0FD1FE6E29400613300 /* FuelStation.swift in Sources */,
+				B2EEB0E81FE6C94A00613300 /* AppDelegate.swift in Sources */,
+				B2EEB0FF1FE6EE5700613300 /* FuelStationsTableViewController.swift in Sources */,
+				B2EEB1011FE6F4EF00613300 /* DetailsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B2EEB0EB1FE6C94A00613300 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2EEB0EC1FE6C94A00613300 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2EEB0F01FE6C94A00613300 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2EEB0F11FE6C94A00613300 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2EEB0F41FE6C94A00613300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B2EEB0F51FE6C94A00613300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2EEB0F71FE6C94A00613300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AF183FEAAEE0FAD494420CC /* Pods-FuelStations.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J7YZTH9Z4F;
+				INFOPLIST_FILE = FuelStations/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackeru.FuelStations;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B2EEB0F81FE6C94A00613300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75178E9075228D8AF81855F2 /* Pods-FuelStations.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J7YZTH9Z4F;
+				INFOPLIST_FILE = FuelStations/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackeru.FuelStations;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2EEB0DF1FE6C94A00613300 /* Build configuration list for PBXProject "FuelStations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2EEB0F41FE6C94A00613300 /* Debug */,
+				B2EEB0F51FE6C94A00613300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2EEB0F61FE6C94A00613300 /* Build configuration list for PBXNativeTarget "FuelStations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2EEB0F71FE6C94A00613300 /* Debug */,
+				B2EEB0F81FE6C94A00613300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2EEB0DC1FE6C94A00613300 /* Project object */;
+}
