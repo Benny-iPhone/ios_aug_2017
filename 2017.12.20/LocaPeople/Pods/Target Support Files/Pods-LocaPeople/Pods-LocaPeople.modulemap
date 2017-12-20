@@ -1,0 +1,6 @@
+framework module Pods_LocaPeople {
+  umbrella header "Pods-LocaPeople-umbrella.h"
+
+  export *
+  module * { export * }
+}
