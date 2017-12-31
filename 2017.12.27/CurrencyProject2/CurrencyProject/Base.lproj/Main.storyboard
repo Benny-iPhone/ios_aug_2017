@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CurrencyProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MX2-Md-rSd">
+                                <rect key="frame" x="16" y="36" width="163.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="quantityEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="9V2-6B-yRU"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ax3-rz-92i">
+                                <rect key="frame" x="195.5" y="40.5" width="163.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrF-sa-7fs">
+                                <rect key="frame" x="179.5" y="40" width="16" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GXp-xP-zUI" customClass="CurrencyPickerTextField" customModule="CurrencyProject" customModuleProvider="target">
+                                <rect key="frame" x="16" y="82" width="163.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="pickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="kEd-bN-Q6D"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-dW-b1K" customClass="CurrencyPickerTextField" customModule="CurrencyProject" customModuleProvider="target">
+                                <rect key="frame" x="195.5" y="82" width="163.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="pickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="p40-vz-zV0"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ax3-rz-92i" secondAttribute="trailing" constant="16" id="1o4-O9-LsK"/>
+                            <constraint firstItem="ax3-rz-92i" firstAttribute="centerY" secondItem="RrF-sa-7fs" secondAttribute="centerY" id="7J9-bm-2Sc"/>
+                            <constraint firstItem="eX2-dW-b1K" firstAttribute="trailing" secondItem="ax3-rz-92i" secondAttribute="trailing" id="80B-cN-W1k"/>
+                            <constraint firstItem="ax3-rz-92i" firstAttribute="leading" secondItem="RrF-sa-7fs" secondAttribute="trailing" id="BmN-OY-Q8p"/>
+                            <constraint firstItem="MX2-Md-rSd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ChX-fB-ONg"/>
+                            <constraint firstItem="RrF-sa-7fs" firstAttribute="centerY" secondItem="MX2-Md-rSd" secondAttribute="centerY" id="QTg-NS-gYq"/>
+                            <constraint firstItem="MX2-Md-rSd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RhP-fC-cKg"/>
+                            <constraint firstItem="GXp-xP-zUI" firstAttribute="leading" secondItem="MX2-Md-rSd" secondAttribute="leading" id="g70-fM-Ya5"/>
+                            <constraint firstItem="GXp-xP-zUI" firstAttribute="width" secondItem="MX2-Md-rSd" secondAttribute="width" id="hjK-64-uWk"/>
+                            <constraint firstItem="eX2-dW-b1K" firstAttribute="width" secondItem="GXp-xP-zUI" secondAttribute="width" id="jkU-Uz-TUl"/>
+                            <constraint firstItem="MX2-Md-rSd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" constant="-24" id="lF1-Gu-9ob"/>
+                            <constraint firstItem="GXp-xP-zUI" firstAttribute="top" secondItem="MX2-Md-rSd" secondAttribute="bottom" constant="16" id="oT2-Jt-ZsP"/>
+                            <constraint firstItem="RrF-sa-7fs" firstAttribute="leading" secondItem="MX2-Md-rSd" secondAttribute="trailing" id="t01-IF-pzM"/>
+                            <constraint firstItem="eX2-dW-b1K" firstAttribute="centerY" secondItem="GXp-xP-zUI" secondAttribute="centerY" id="u2y-5i-9IS"/>
+                            <constraint firstItem="ax3-rz-92i" firstAttribute="width" secondItem="MX2-Md-rSd" secondAttribute="width" id="xAA-it-jaw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="fromTextField" destination="GXp-xP-zUI" id="3Hb-4L-TTX"/>
+                        <outlet property="quantityTextField" destination="MX2-Md-rSd" id="XSP-jc-LZw"/>
+                        <outlet property="toTextField" destination="eX2-dW-b1K" id="YOz-mB-bBj"/>
+                        <outlet property="valueLabel" destination="ax3-rz-92i" id="OSy-hL-t5Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122.40000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

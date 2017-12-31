@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CurrencyProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWl-Kv-jQl">
+                                <rect key="frame" x="195.5" y="40.5" width="163.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A76-yJ-Ohu">
+                                <rect key="frame" x="16" y="36" width="163.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="qunatityEditingChangedAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="MwV-cW-mEp"/>
+                                </connections>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Kc-z6-FzP">
+                                <rect key="frame" x="16" y="106" width="163.5" height="216"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5G-h2-qCc">
+                                <rect key="frame" x="195.5" y="106" width="163.5" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="A76-yJ-Ohu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0Jr-yn-GUg"/>
+                            <constraint firstItem="A76-yJ-Ohu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="24m-Qc-YjB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gWl-Kv-jQl" secondAttribute="trailing" constant="16" id="J0L-5A-ugn"/>
+                            <constraint firstItem="c5G-h2-qCc" firstAttribute="centerY" secondItem="8Kc-z6-FzP" secondAttribute="centerY" id="Ob7-Hr-ltD"/>
+                            <constraint firstItem="c5G-h2-qCc" firstAttribute="centerX" secondItem="gWl-Kv-jQl" secondAttribute="centerX" id="P23-mI-hvw"/>
+                            <constraint firstItem="gWl-Kv-jQl" firstAttribute="centerY" secondItem="A76-yJ-Ohu" secondAttribute="centerY" id="X3v-a3-Zkf"/>
+                            <constraint firstItem="8Kc-z6-FzP" firstAttribute="width" secondItem="A76-yJ-Ohu" secondAttribute="width" id="emh-RG-uyu"/>
+                            <constraint firstItem="c5G-h2-qCc" firstAttribute="width" secondItem="8Kc-z6-FzP" secondAttribute="width" id="hJh-OI-TKt"/>
+                            <constraint firstItem="8Kc-z6-FzP" firstAttribute="centerX" secondItem="A76-yJ-Ohu" secondAttribute="centerX" id="i40-aQ-6dy"/>
+                            <constraint firstItem="8Kc-z6-FzP" firstAttribute="top" secondItem="A76-yJ-Ohu" secondAttribute="bottom" constant="40" id="kiG-mH-wdQ"/>
+                            <constraint firstItem="A76-yJ-Ohu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" constant="-24" id="r2P-HK-rxY"/>
+                            <constraint firstItem="gWl-Kv-jQl" firstAttribute="width" secondItem="A76-yJ-Ohu" secondAttribute="width" id="ruq-Ch-LUT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="fromPickerView" destination="8Kc-z6-FzP" id="rFN-LW-lj5"/>
+                        <outlet property="quantityTextField" destination="A76-yJ-Ohu" id="poG-gu-0zZ"/>
+                        <outlet property="toPickerView" destination="c5G-h2-qCc" id="NkD-Fv-CqV"/>
+                        <outlet property="valueLabel" destination="gWl-Kv-jQl" id="bIH-dE-PWG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
